@@ -33,6 +33,9 @@ const alertOptions = {
 
 class App extends Component {
   render() {
+    {
+      console.log(store);
+    }
     return (
       <Provider store={store}>
         <AlertProvider template={AlertTemplate} {...alertOptions}>

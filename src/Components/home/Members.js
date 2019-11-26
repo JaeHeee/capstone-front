@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getMembers } from "../../actions/members";
+import Button from "../button";
 
 export class Members extends Component {
   static propTypes = {
@@ -16,6 +17,7 @@ export class Members extends Component {
     return (
       <div>
         <h2>Members</h2>
+        {/* <Button title="members" /> */}
         <table>
           <thead>
             <tr>

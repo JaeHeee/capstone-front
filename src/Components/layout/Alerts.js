@@ -9,8 +9,13 @@ export class Alerts extends Component {
     error: PropTypes.object.isRequired
   };
 
-  UNSAFE_omponentWillReceiveProps(prevProps) {
+  componentDidMount() {
+    console.log(this.props);
+  }
+
+  UNSAFE_componentWillReceiveProps(prevProps) {
     const { error, alert } = this.props;
+    console.log(error);
     if (error !== prevProps.error) {
       if (error.msg.name) alert.error("Name is Required");
       if (error.msg.email) alert.error("Email is Required");
@@ -31,4 +36,4 @@ const withConnect = connect(
   {}
 );
 
-export default withAlert()(withConnect(Alerts));
+export default withConnect(Alerts);
